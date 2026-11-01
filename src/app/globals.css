@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bordeaux-950: #140308;
+  --color-bordeaux-900: #20070F;
+  --color-bordeaux-800: #3B101D;
+  --color-bordeaux-700: #551628;
+  --color-cherry: #711F35;
+  --color-cherry-light: #942946;
+  --color-gold: #D6B77A;
+  --color-gold-light: #F7E7C4;
+  --color-gold-dark: #A88647;
+  --color-rose-powder: #E8C7CB;
+  --color-rose-soft: #F9ECEE;
+  --color-ivory: #FFF4E8;
+  --color-parchment: #F8EFE4;
+
+  --font-serif: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  --font-sans: var(--font-jakarta), "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-script: var(--font-alex), "Alex Brush", cursive;
+}
+
+:root {
+  --bordeaux: #3B101D;
+  --bordeaux-dark: #19050C;
+  --cherry: #711F35;
+  --gold: #D6B77A;
+  --gold-light: #F7E7C4;
+  --rose-powder: #E8C7CB;
+  --ivory: #FFF4E8;
+}
+
+/* Base styling */
+body {
+  background-color: #16040A;
+  color: #FFF4E8;
+  font-family: var(--font-jakarta), system-ui, sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #19050C;
+}
+::-webkit-scrollbar-thumb {
+  background: #711F35;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D6B77A;
+}
+
+/* Romantic Glows */
+.glow-gold {
+  box-shadow: 0 0 35px -5px rgba(214, 183, 122, 0.45);
+}
+
+.glow-gold-text {
+  text-shadow: 0 0 20px rgba(214, 183, 122, 0.6);
+}
+
+.glow-cherry {
+  box-shadow: 0 0 45px -8px rgba(113, 31, 53, 0.7);
+}
+
+.glow-rose-text {
+  text-shadow: 0 0 25px rgba(232, 199, 203, 0.5);
+}
+
+/* Vintage Glass & Parchment */
+.glass-bordeaux {
+  background: rgba(32, 7, 15, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(214, 183, 122, 0.18);
+}
+
+.glass-card {
+  background: radial-gradient(circle at 50% 0%, rgba(113, 31, 53, 0.35), rgba(25, 5, 12, 0.85));
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(214, 183, 122, 0.22);
+}
+
+.parchment-sheet {
+  background: #FDF9F3;
+  color: #2D1418;
+  box-shadow: 
+    0 20px 45px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(214, 183, 122, 0.4),
+    inset 0 0 60px rgba(214, 183, 122, 0.22);
+}
+
+/* Wax Seal 3D effect */
+.wax-seal {
+  background: radial-gradient(circle at 35% 35%, #D93856, #801426 60%, #4D0914 100%);
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.55),
+    inset 0 2px 4px rgba(255, 255, 255, 0.35),
+    inset 0 -2px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* Subtle Vignette */
+.vignette {
+  background: radial-gradient(circle, transparent 40%, rgba(10, 2, 5, 0.85) 100%);
+  pointer-events: none;
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+.animate-shimmer {
+  animation: shimmer 3s infinite ease-in-out;
+}
+
+/* Floating animation */
+@keyframes romanticFloat {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1.5deg); }
+}
+
+.animate-float {
+  animation: romanticFloat 6s ease-in-out infinite;
+}
+
+/* Font helpers */
+.font-serif {
+  font-family: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+}
+
+.font-sans {
+  font-family: var(--font-jakarta), "Plus Jakarta Sans", system-ui, sans-serif;
+}
+
+.font-script {
+  font-family: var(--font-alex), "Alex Brush", cursive;
+}
